@@ -43,7 +43,6 @@ dependencies {
 	implementation 'org.springframework.security:spring-security-taglibs'
 	
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	
 }
 
 eclipse {
@@ -57,4 +56,12 @@ eclipse {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        resources {          
+            srcDirs = ['src/main/resources', 'src/main/java']
+        }
+    }
 }
